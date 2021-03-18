@@ -1,5 +1,5 @@
 module.exports = {
-  type: 'sqlite',
-  database: 'tim_database',
+  type: process.env.DATABASE_TYPE,
+  database: process.env.DATABASE,
   synchronize: true,
 };
