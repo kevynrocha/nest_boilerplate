@@ -7,7 +7,7 @@ export class ExternalService {
 
   async findAddressByCEP(cep: string): Promise<ResponseCEP> {
     const response = await this.httpService
-      .get(`https://brasilapi.com.br/api/cep/v1/${cep}`)
+      .get(`${process.env.BRASIL_API_URL}/cep/v1/${cep}`)
       .toPromise();
 
     return response.data;
